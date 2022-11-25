@@ -9,7 +9,7 @@
 и с сервера в онлайн режиме. За это могут отвечать разные сервисы. Чтобы понять,
 какой именно сервис инжектировать в компонент, мы используем factory provider.
 
-`
+```ts
 import { Component, OnInit } from '@angular/core';
 import { IsOnlineService } from './services/is-online.service';
 import { LocalService } from './services/local.service';
@@ -42,7 +42,7 @@ export class AppComponent implements OnInit {
     this.isOnlineStatus = this.isOnline.isOnline; // = false
   }
 }
-`
+```
 
 Тут в случае режима офлайн мы подменяем наш сервис подачи данных компоненту
 чтобы он мог продолжать работать.
